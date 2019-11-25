@@ -33,4 +33,15 @@ public class StackTest {
         Assert.assertEquals("ca", result);
     }
 
+    @Test
+    public void testValidParentheses() {
+        StackOperation operation = new StackOperation();
+        Assert.assertFalse(operation.validParentheses("(]"));
+        Assert.assertTrue(operation.validParentheses("()"));
+        Assert.assertTrue(operation.validParentheses("{([])}"));
+
+
+    }
+
+
 }

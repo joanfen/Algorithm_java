@@ -1,5 +1,6 @@
 package Stack;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 public class StackOperation {
@@ -28,5 +29,25 @@ public class StackOperation {
             sb.append(character);
         }
         return sb.toString();
+    }
+
+    public boolean validParentheses(String s) {
+        Stack<Character> stack = new Stack<>();
+        HashMap<Character, Character> map = new HashMap<>();
+        map.put('(', ')');
+        map.put('{', '}');
+        map.put('[', ']');
+        for (int i = 0; i < s.length(); i++) {
+            Character c = s.charAt(i);
+            if (!stack.isEmpty()
+                    && map.containsKey(stack.peek())
+                    && map.get(stack.peek()).equals(c)) {
+                stack.pop();
+            }
+            else {
+                stack.push(c);
+            }
+        }
+        return stack.isEmpty();
     }
 }
