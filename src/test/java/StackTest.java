@@ -1,4 +1,5 @@
 import Stack.MinStack;
+import Stack.QueueStack;
 import Stack.StackOperation;
 import Stack.StackQueue;
 import org.junit.Assert;
@@ -56,9 +57,15 @@ public class StackTest {
         Assert.assertEquals(stack.top(), 0);
         Assert.assertEquals(stack.getMin(), -1);
 
-
-
     }
 
+    @Test
+    public void testQueueStack() {
+        QueueStack stack = new QueueStack();
+        stack.push(1);
+        stack.push(2);
+        Assert.assertEquals(stack.pop(), 2);
+
+    }
 
 }

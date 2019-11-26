@@ -11,7 +11,6 @@ public class StackQueue {
     private Stack<Integer> s2 = new Stack<>();
     private Integer front;
 
-    /** Initialize your data structure here. */
     public StackQueue() {
 
     }
