@@ -31,6 +31,11 @@ public class StackOperation {
         return sb.toString();
     }
 
+    /**
+     * 匹配括号
+     * @param s
+     * @return
+     */
     public boolean validParentheses(String s) {
         Stack<Character> stack = new Stack<>();
         HashMap<Character, Character> map = new HashMap<>();

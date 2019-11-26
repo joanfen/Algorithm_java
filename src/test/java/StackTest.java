@@ -1,3 +1,4 @@
+import Stack.MinStack;
 import Stack.StackOperation;
 import Stack.StackQueue;
 import org.junit.Assert;
@@ -39,6 +40,22 @@ public class StackTest {
         Assert.assertFalse(operation.validParentheses("(]"));
         Assert.assertTrue(operation.validParentheses("()"));
         Assert.assertTrue(operation.validParentheses("{([])}"));
+    }
+
+    @Test
+    public void testMinStack() {
+        MinStack stack = new MinStack();
+        stack.getMin();
+        stack.push(-1);
+        Assert.assertEquals(stack.getMin(), -1);
+        stack.push(0);
+        Assert.assertEquals(stack.getMin(), -1);
+        stack.push(-2);
+        Assert.assertEquals(stack.getMin(), -2);
+        stack.pop();
+        Assert.assertEquals(stack.top(), 0);
+        Assert.assertEquals(stack.getMin(), -1);
+
 
 
     }
