@@ -32,9 +32,8 @@ public class StackOperation {
     }
 
     /**
+     *
      * 匹配括号
-     * @param s
-     * @return
      */
     public boolean validParentheses(String s) {
         Stack<Character> stack = new Stack<>();
@@ -54,5 +53,20 @@ public class StackOperation {
             }
         }
         return stack.isEmpty();
+
     }
+
+//    /**
+//     * next greater num
+//     * @param nums1
+//     * @param nums2
+//     * @return
+//     */
+//    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//        for (int i = 0; i< nums2.length; i++) {
+//            map.put(nums1[i], i);
+//        }
+//
+//    }
 }

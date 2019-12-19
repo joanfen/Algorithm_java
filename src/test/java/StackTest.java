@@ -68,4 +68,10 @@ public class StackTest {
 
     }
 
+    @Test
+    public void test() {
+
+        System.out.println(4 >>> 1);
+    }
+
 }
