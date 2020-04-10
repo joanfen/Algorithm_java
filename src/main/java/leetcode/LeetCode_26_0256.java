@@ -1,4 +1,4 @@
-package Week0;
+package leetcode;
 
 public class LeetCode_26_0256 {
     public int removeDuplicates(int[] nums) {

@@ -1,4 +1,4 @@
-package Week0;
+package leetcode;
 
 public class LeetCode_283_0256 {
     /**
